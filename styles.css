@@ -1,46 +1,112 @@
-@import url('https://fonts.googleapis.com/css2?family=Itim&family=Roboto:wght@300&display=swap');
-
 * {
-  box-sizng: border-box;
-  margin: 0;
-  padding 0;
-  background-color: gray;
+    box-sizing: border-box;
+    font-family: 'Abel', sans-serif;
 }
 
-li, a, button {
-  font-family: "Roboto", Sans-serif;
-  font-weight: "300"
-  font-size: 16px;
-  text-decoration: none;
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 10%;
+#top-bar {
+    left: 0;
+    top: 0;
+    margin: 0px;
+    padding: 0;
+    border:1px solid rgb(96, 35, 35);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 75px;
+    width: 100%;
+    background-color: rgb(215, 215, 144);
+    color: rgb(47, 43, 158);
+    z-index: 1000; /* Ensure it's above other content */
 }
 
-.logo{
-  cursor: pointer;
+.background {
+    position: fixed;
+    color: rgb(92, 80, 49);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
 }
 
-.nav-links{
-  list-style: none;
-}
-.nav-links li {
-  display: inline-block;
-  padding: 0px 20px;
-}
-
-.nav-links a {
-  transition: all 0.3s ease 0s;
-}
-
-.nav-links a:hover {
-  color: rgba(0088a9;
+img {
+    position: absolute;
+    left: 1%;
+    bottom: 0%;
+    max-width: 100%;
+    max-height: 90%;
+    border: 0; /* Remove the 'px' */
+    padding: 0; /* Remove the 'px' */
+    margin: 5px;
 }
 
+h1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-align: center;
+    color: brown;
+    font-size: 1.6rem;
+}
 
+ul {
+    list-style: none;
+    display: inline-block;
+    justify-content: flex-end; /* Changed 'right' to 'flex-end' */
+    position: absolute;
+    right: 2%;
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+}
 
-  
+li {
+    padding: 0 5px; /* Adjusted padding */
+    color: white;
+    font-size: 0.5rem; /* Adjusted font-size */
+    display: inline;
+}
+
+li:hover {
+    color: green; /* Changed 'white' to 'green' as an example */
+}
+
+h2 {
+    color: white;
+}
+
+#body {
+    
+    position: relative;
+    height: 1500px;
+    width: 100%;
+    overflow: hidden; /* Added to prevent scrollbars */
+}
+
+#welcome {
+    padding-top: 75px;
+    height: 400px;
+    width: 100%;
+    background-color: rgb(129, 105, 152);
+    color: white;
+}
+
+#aboutus {
+    height: 400px;
+    width: 100%;
+    background-color: rgb(68, 135, 88);
+    color: green;
+}
+
+#services {
+    color: green;
+    height: 400px;
+    width: 100%;
+    background-color: rgb(59, 65, 101);
+}
