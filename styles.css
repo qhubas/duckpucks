@@ -1,112 +1,324 @@
 * {
-    box-sizing: border-box;
-    font-family: 'Abel', sans-serif;
-}
-
-html {
-    scroll-behavior: smooth; /* Enable smooth scrolling */
-}
-
-#top-bar {
-    left: 0;
-    top: 0;
-    margin: 0px;
+    margin: 0;
     padding: 0;
-    border:1px solid rgb(96, 35, 35);
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {scroll-behavior: smooth;}
+.container {
+    height:300px;
+    width: 100vw;
+    margin-bottom: 0px;
+    background-color: brown;
+    display: flex;
+}
+
+
+.nav-bar {
+    z-index: 99;
     position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100vw;
+    background-color: rgb(39, 127, 39);
+}
+.nav-div {
+    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    height: 75px;
-    width: 100%;
-    background-color: rgb(215, 215, 144);
-    color: rgb(47, 43, 158);
-    z-index: 1000; /* Ensure it's above other content */
+    justify-content: center;
+    justify-content: space-around;
+}
+li {
+    background-color: rgb(240, 214, 112);
+    color: white;
+    padding: 4px;
+    border-radius: 3px;
+    display: inline-block;
+    flex-grow: 1;
+}
+.logo a {
+    font-size: 2rem;
+    color: white;
+}
+.nav-button { 
+    border-radius: ;
+    padding: 5px;
+    color: white;
 }
 
-.background {
-    position: fixed;
-    color: rgb(92, 80, 49);
-    height: 100%;
-    width: 100%;
-    z-index: -1;
+.hero-container {
+    position:relative;
+    height:500px;
+    width: 100vw;
+    margin-top: 59px;
+    margin-bottom: 1px;
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-
-img {
+.hero-container::before{
+    content: "";
+    background-image: url(https://www.kalmbachfeeds.com/wp-content/uploads/2022/02/Kalmbach-Duck-Article-2.4.22.jpg);
+    background-size:cover;
+    background-position: center;
     position: absolute;
-    left: 1%;
-    bottom: 0%;
-    max-width: 100%;
-    max-height: 90%;
-    border: 0; /* Remove the 'px' */
-    padding: 0; /* Remove the 'px' */
-    margin: 5px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    filter: brightness(.66);
+    z-index: 0;
 }
+
+a {color: white;}
 
 h1 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    text-align: center;
-    color: brown;
-    font-size: 1.6rem;
-}
-
-ul {
-    list-style: none;
-    display: inline-block;
-    justify-content: flex-end; /* Changed 'right' to 'flex-end' */
-    position: absolute;
-    right: 2%;
-    margin: 0;
-    padding: 0;
-    color: aliceblue;
-}
-
-li {
-    padding: 0 5px; /* Adjusted padding */
-    color: white;
-    font-size: 0.5rem; /* Adjusted font-size */
-    display: inline;
-}
-
-li:hover {
-    color: green; /* Changed 'white' to 'green' as an example */
-}
-
-h2 {
-    color: white;
-}
-
-#body {
-    
+    font-size: 3rem;
     position: relative;
-    height: 1500px;
-    width: 100%;
-    overflow: hidden; /* Added to prevent scrollbars */
+    color: white;
+}
+#hero-sub-text {
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 1);
+    font-size: 1.2rem;
+    color: rgb(4, 2, 1);
+    position: relative;
+}
+#hero-input {
+    text-align: center;
+    width: 37%;
+    position: relative;
+    margin:10px 10px;
+    border: 2px gray;
+    padding: 5px;
+    border: solid rgb(169, 199, 59) 2px;
+    border-radius: 10px;
+}
+#hero-button {
+    position: relative;
+    color: green;
+    padding: 5px;
+    border-radius: 10px;
+    border: green solid 2px;
 }
 
 #welcome {
-    padding-top: 75px;
-    height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    background-color: rgb(68, 111, 87);
+}
+#welcome::before {
+    content: "";
+    background-image: url(https://ogden_images.s3.amazonaws.com/www.grit.com/images/2021/05/23114911/whyraiseducks-1100x736.jpeg);
+    position: absolute;
+    bottom: 0;
+    right: 0;
     width: 100%;
-    background-color: rgb(129, 105, 152);
+    height: 100%;
+    opacity: .3;
+} 
+.welcome-image {
+    background-image: url("https://ogden_images.s3.amazonaws.com/www.grit.com/images/2021/05/23114911/whyraiseducks-1100x736.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 50%;
+}
+.duck-img {
+    align-items: center;
+    object-fit: contain;
+    height: 100%;
+    overflow: hidden;    
+}
+
+h2 {position: relative;
+    color: white;
+    font-size: 1.33rem;
+    margin:10px 10px 10px 10px;
+}
+.duck-link {
+    color: orange;
+}
+p {
+    position: relative;
+color: beige;
+margin:10px 10px 10px 10px;
+}
+
+.duck-container {
+    background: linear-gradient(130deg,rgb(147, 192, 160) 10%, rgb(94, 74, 38) 76%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 360px;
+    width:100vw;
+    justify-content: space-around;
+    background-color: rgb(147, 192, 160);
+}
+
+#no-duck, #yes-duck, #maybe-duck{
+    border-radius: 25px;
+    box-shadow: 10px 12px 40px rgb(44, 26, 7);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(87, 137, 137);
+
+}
+#no-duck {
+    height: 90%;
+    width:29%;
+}
+#maybe-duck {
+    height: 90%;
+    width:29%;
+}
+#yes-duck {
+    height: 90%;
+    width: 29%;
+}
+#yes-duck::before {
+    content: "";
+    background-image: url(https://ogden_images.s3.amazonaws.com/www.grit.com/images/2021/05/23114911/whyraiseducks-1100x736.jpeg);
+    background-size: cover;
+    position: absolute;
+    top:0;
+    right: 0;
+}
+
+.duckertext{
+    margin: 20px;
     color: white;
 }
+.Duckton > a{color: black;}
+.Duckton {
+    border-radius: 10px;
+    background-color: rgb(167, 232, 145);
+    border:none;
+    padding: 10px;
+    width: 77%;
+    box-shadow: 0px 0px 10px white;
 
-#aboutus {
-    height: 400px;
-    width: 100%;
-    background-color: rgb(68, 135, 88);
-    color: green;
 }
+.duckertext {text-align: center; font-size: .9rem;}
 
-#services {
-    color: green;
-    height: 400px;
-    width: 100%;
-    background-color: rgb(59, 65, 101);
+#puck {
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 33%;
+    background-color: rgb(5, 34, 18);
 }
+#puck::before {
+    content: "";
+    background-image: url(https://th-thumbnailer.cdn-si-edu.com/xBhNp34NoWDCRBKO_w4ajZIG5c8=/800x800/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/25/0a/250a6401-2a44-4c8a-9b9b-87f3df721844/800px-six_ducklings.jpg);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .6;
+} 
+.puck-img-container {
+    background-image: url(https://th-thumbnailer.cdn-si-edu.com/xBhNp34NoWDCRBKO_w4ajZIG5c8=/800x800/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/25/0a/250a6401-2a44-4c8a-9b9b-87f3df721844/800px-six_ducklings.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 70%;
+    
+}  
+
+.container2 {
+    display: flex;
+    height: 200px;
+    width: 100vw;
+    background-color: brown;
+}
+.contt {
+    height: 100%;
+    background-color: rgb(103, 148, 148);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+.contt>p{text-align: center;}
+
+.form-container {
+    display: flex;
+    width: 70%;
+    height:100%;
+    background-color: blue;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(109, 65, 74);
+    }
+    .contact-submit {
+        padding: 5px;
+        margin: 5px;
+        background-color: rgb(166, 239, 239);
+        border-radius: 10px;
+    }  
+ footer {
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100vw;
+    color: rgb(111, 184, 124);
+ }   
+/*
+#form-container {
+    width: 55%;
+    height:100%;
+
+}
+.contt {
+    height: 100%;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+.contact-form {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color:crimson;
+    }
+label {
+    font-size: .8rem;
+    color: aliceblue;
+    display: block; 
+    margin: 20px;}
+
+.contact-submit {
+    padding: 5px;
+    margin: 5px;
+}  
